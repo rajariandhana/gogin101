@@ -2,11 +2,44 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] GET    /videos                   --> main.main.func1 (4 handlers)
-[GIN-debug] POST   /videos                   --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (4): 
+	- 
+	- footer.html
+	- header.html
+	- index.html
+
+[GIN-debug] GET    /api/videos               --> main.main.func1 (4 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /view/videos              --> myapp/controller.VideoController.ShowAll-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [26 Nov 24 14:43 WIB] POST /videos 400 378.758µs 
-::1 - [26 Nov 24 14:43 WIB] POST /videos 400 150.412µs 
-::1 - [26 Nov 24 14:43 WIB] POST /videos 200 305.461µs 
+::1 - [26 Nov 24 15:14 WIB] POST /videos 404 5.349µs 
+::1 - [26 Nov 24 15:14 WIB] GET /videos 404 2.049µs 
+::1 - [26 Nov 24 15:15 WIB] GET / 401 11.523µs 
+::1 - [26 Nov 24 15:15 WIB] GET / 401 9.424µs 
+::1 - [26 Nov 24 15:15 WIB] GET / 401 6.258µs 
+::1 - [26 Nov 24 15:15 WIB] GET / 401 4.837µs 
+::1 - [26 Nov 24 15:15 WIB] GET /videos 401 6.83µs 
+::1 - [26 Nov 24 15:15 WIB] GET /videos 401 18.865µs 
+::1 - [26 Nov 24 15:15 WIB] GET /videos 401 14.752µs 
+::1 - [26 Nov 24 15:15 WIB] GET /videos 404 3.613µs 
+::1 - [26 Nov 24 15:15 WIB] GET /view 404 7.904µs 
+::1 - [26 Nov 24 15:15 WIB] GET /view/videos 200 1.897326ms 
+::1 - [26 Nov 24 15:15 WIB] POST /videos 404 2.499µs 
+::1 - [26 Nov 24 15:15 WIB] POST /api/videos 200 569.456µs 
+::1 - [26 Nov 24 15:15 WIB] GET /view/videos 200 644.502µs 
+::1 - [26 Nov 24 15:16 WIB] POST /api/videos 400 191.03µs 
+::1 - [26 Nov 24 15:16 WIB] POST /api/videos 200 66.069µs 
+::1 - [26 Nov 24 15:16 WIB] GET /view/videos 401 4.865µs 
+::1 - [26 Nov 24 15:16 WIB] GET /view/videos 200 2.022722ms 
+::1 - [26 Nov 24 15:17 WIB] GET /view/videos 200 1.428365ms 
+::1 - [26 Nov 24 15:17 WIB] GET /view/videos 401 4.01µs 
+::1 - [26 Nov 24 15:17 WIB] GET /view/videos 200 767.834µs 
+::1 - [26 Nov 24 15:18 WIB] GET /view/videos 200 1.601159ms 
+::1 - [26 Nov 24 15:18 WIB] GET /view/videos 200 1.514335ms 
+::1 - [26 Nov 24 15:18 WIB] GET /view/videos 200 434.006µs 
+::1 - [26 Nov 24 15:18 WIB] GET /view/videos 200 465.409µs 
+::1 - [26 Nov 24 15:18 WIB] GET /view/videos 200 2.042295ms 

@@ -1,0 +1,11 @@
+{{template "header.html"}}
+<div class="grid grid-cols-2 gap-4 p-4">
+    {{range .videos}}
+    <div class="bg-white rounded-md shadow-md px-4 py-2">
+        <h1 class="font-bold text-lg">{{.Title}}</h1>
+        <span class="text-gray-500 text-sm">{{.Author.Name}}</span>
+        <p>{{.Description}}</p>
+    </div>
+    {{end}}
+</div>
+{{template "footer.html"}}
